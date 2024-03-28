@@ -1,4 +1,12 @@
 
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# #######################################          Extended Array           ########################################## #
+# #######################################         Alkhateeb-Ghaith          ########################################## #
+# #######################################            ON GITHUB              ########################################## #
+# -------------------------------------------------------------------------------------------------------------------- #
+
+
 def sort(unordered_list1):          # The Function.
 
     the_ordered_list = []          # The List Which Will Contains The Sorted Numbers.
@@ -24,7 +32,7 @@ enter = input("Press any key to start inserting numbers or \'q\' to cancel : ").
 while enter != 'q':          # While Statement ( To Insert The Numbers You Want ).
 
     the_value = eval(input("Enter the number :>").strip())          # A Variable To Store The Number.
-    unordered_list.append(the_value)                               # Adding The Number To The " unordered_list ".
+    unordered_list.append(the_value)                                # Adding The Number To The " unordered_list ".
 
     enter = input("Press any key to continue or \'q\' to stop inserting numbers : ").lower().strip()
 
