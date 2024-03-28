@@ -1,0 +1,44 @@
+
+
+# -------------------------------------------------------------------------------------------------------------------- #
+# #######################################      Insertion Sort Algorithm     ########################################## #
+# #######################################         Alkhateeb-Ghaith          ########################################## #
+# #######################################             ON GITHUB             ########################################## #
+# -------------------------------------------------------------------------------------------------------------------- #
+
+
+def sort(the_list1):          # The Function.
+
+    for pointer in range(1, len(the_list1)):          # Loop Over Each Element In The List, Starting From The Second Element (Index 1).
+
+        the_current_value = the_list1[pointer]          # Store The Current Element In A Variable.
+
+        index_of_the_value = pointer                    # To Keep Track Of The Current Position.
+
+        # While We Haven't Reached The Beginning Of The List And The Previous Element Is Greater Than The "the_current_value".
+        while index_of_the_value > 0 and the_current_value < the_list1[index_of_the_value - 1]:
+
+            the_list1[index_of_the_value] = the_list1[index_of_the_value - 1]   # Shift The Element At Position - 1 To The Right.
+
+            index_of_the_value -= 1          # Move To The Next Position To The Left.
+
+        the_list1[index_of_the_value] = the_current_value        # Inserting The "the_current_value" Element Into Its Correct Sorted Position In The List.
+
+    print(f'The list is empty!' if not the_list1 else f"The Modified List Is ==> {the_list1}")
+    print("By \'Alkhateeb-Ghaith\'.")
+
+
+# The Starting Point :-
+the_list = []          # The List Which Must Be Ordered.
+
+print(" \n######### MAKE SURE THAT YOU INSERT ONLY NUMBERS ######### ")
+enter = input("Press any key to start inserting numbers or \'q\' to cancel : ").lower().strip()
+
+while enter != "q":          # While Statement ( To Insert The Numbers You Want ).
+
+    the_value = eval(input("Enter the number :>").strip())          # A Variable To Store The Number.
+    the_list.append(the_value)                                      # Adding The Number To " the_list ".
+
+    enter = input("Press any key to continue or \'q\' to stop inserting numbers : ").lower().strip()
+
+sort(the_list)          # Calling The Function.
